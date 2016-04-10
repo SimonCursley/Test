@@ -1,0 +1,28 @@
+/*This program reads digits entered from the keyboard it seperates them into individual digits
+  on a new line. Each digit is followed by the same number of stars as its self. */
+
+#include <stdio.h>
+
+int main() {
+	
+	// Declare variables
+	int digit, n;
+	
+	// Instruct the user what to do
+	printf("Enter a number : ");
+	// read the input from keyboard
+	scanf("%d", &n);
+	
+	// loop for the digits entered from keyboard
+	while (n>0) {
+		digit=n % 10;            // using modulas to find the remainder 
+		printf("\n%d ", digit);  // and dividing the number by 10
+		n /= 10;                 // to seperate them to display on new line
+		while (digit-->0)  {     // Seconed loop for stars. this will loop as 
+			printf ("*");        // many times as the value of the digit entered
+		}                        // and a star will be displayed each time
+	}
+
+	
+	return 0;
+}
